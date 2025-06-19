@@ -90,3 +90,7 @@ a.rounded-button:hover{
     align-items: center;
 }
 
+.top {
+    display: block;
+    align-items: center;
+}
