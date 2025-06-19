@@ -35,8 +35,6 @@ h2 {
     width: 255px;
 }
 
-
-
 main {
     max-width: 500px;
     margin: auto;
@@ -65,7 +63,7 @@ button {
   width: 250px;
 }
 
-.rounded-button {
+a.rounded-button {
     display: block;
     padding: 1em 2em;
     border-radius: 8px;
@@ -82,7 +80,7 @@ button {
     width: 300px;
 }
 
-.rounded-button:hover{
+a.rounded-button:hover{
     background-color: rgb(162, 185, 138);
 }
 
