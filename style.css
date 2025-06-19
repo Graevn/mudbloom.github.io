@@ -35,12 +35,7 @@ h2 {
     width: 255px;
 }
 
-nav a {
-    color: #ffffff;
-    margin: 0 10px;
-    text-decoration: none;
-    padding: 1.5rem;
-}
+
 
 main {
     max-width: 500px;
@@ -62,40 +57,12 @@ p {
     text-align: center;
 }
 
-li {
-    color:aqua;
-    text-align: center;
-}
-
-section {
-    padding: auto;
-    background-color: transparent;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 55%;
-}
-
-a{
-    color: #fff;
-    text-decoration: none;
-}
-
-a:hover{
-    color: rgb(255, 255, 255);
-}
-
 button {
   background-color: #806071; 
   color: rgb(99, 87, 87); 
   border: 2px solid #292b2a;
   block-size: 32px;
   width: 250px;
-}
-
-button:hover {
-  background-color: #a3b677da;
-  color: rgb(0, 0, 0);
 }
 
 .rounded-button {
