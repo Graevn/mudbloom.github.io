@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mudbloom</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Fixed transparent navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="/images/mbglyph.png" alt="Mudbloom Logo" class="nav-logo" /> 
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#contact">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="/images/mblogo.png" alt="Mudbloom Logo" class="main-logo" /> 
+      <h1>Rise Naturally, Bloom Authentically.</h1>
+      <p>Handcrafted self-care rooted in nature and intention.</p>
+      <a href="#shop" class="btn">Explore Products and Services</a>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="section">
+    <div class="content">
+      <h2>Welcome to Mudbloom</h2>
+      <p>
+        Here, you’ll find lovingly handcrafted self-care products made from raw, plant-based ingredients. Through cards, conversation, and meditation; we’ll meet you exactly where you are.
+      </p>
+      <p>
+        Mudbloom is here to help you slow down, listen inward, and breathe something new — a space where transformation blooms naturally.
+      </p>
+    </div>
+  </section>
+
+  <!-- Offerings section -->
+  <section id="shop" class="section light">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Products and Services</h2>
+
+      <div class="offerings-container">
+        <!-- Left: Natural Wellness Products -->
+        <div class="offering">
+          <h3>Natural Wellness Products</h3>
+          <p>
+            Hand-blended in small batches using full-spectrum botanicals, pure essential oils, and eco-friendly packaging.
+          </p>
+          <a href="#" class="btn">COMING SOON</a>
+        </div>
+
+        <!-- Right: Intuitive Services -->
+        <div class="offering">
+          <h3>Intuitive Services</h3>
+          <p>
+            Personalized card readings and guided meditations — your moment to pause, reflect, and realign.
+          </p>
+          <a href="mailto:mymudbloom@gmail.com?subject=Booking" class="btn">Book a Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section id="contact" class="section">
+    <div class="content">
+      <h2>Connect</h2>
+      <p>***Inspire, Create, manifest info and links***</p>
+      <p>Email: <a href="mailto:mymudbloom@gmail.com?subject=Info">mymudbloom@gmail.com</a></p>
+      <p>Follow us on Instagram: <a href="https://www.instagram.com/mymudbloom/" target="_blank">@mudbloom</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mudbloom | Eco-friendly • Plant-based • Heart-crafted with Love</p>
+  </footer>
+
+  <script>
+    // Navbar background on scroll
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector(".navbar");
+      nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
