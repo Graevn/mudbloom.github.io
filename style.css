@@ -1,0 +1,290 @@
+/* --- Reset and base styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #50697a;
+  line-height: 1.7;
+}
+
+.main-logo {
+  width: 360px;
+}
+
+/* --- Navbar --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  max-height: 50px;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Default hover (before scroll) */
+.nav-links a:hover {
+  color: #ec78f7;
+}
+
+/* Navbar solid after scroll */
+.navbar.scrolled {
+  background: rgb(50, 31, 53);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar.scrolled a {
+  color: #fffdfdb7;
+}
+
+/* Hover fix after scroll */
+.navbar.scrolled a:hover {
+  color: #ec78f7;
+}
+
+/* --- Hero section --- */
+.hero {
+  height: 100vh;
+  background: url('/images/mudbanner1.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #bf8cd6;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e0c1ee;
+}
+
+/* --- Section styling --- */
+.section {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.section.light {
+  background-color: #856b83;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Faint background image for #shop section */
+#shop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/mudbanner.jpg') center/cover no-repeat;
+  opacity: 0.15; /* ← adjust this value */
+  z-index: 0;
+}
+
+
+.content {
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.section h2 {
+  font-family: 'Playfair Display';
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color:  #192227ab;
+}
+
+.section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color:#fff;
+}
+
+/* --- Offerings split layout --- */
+.offerings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  align-items: stretch; /* ensures equal height cards */
+}
+
+.offering {
+  flex: 1 1 350px;
+  background: rgba(255, 255, 255, 0.185);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.offering:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.offering h3 {
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.offering p {
+  font-family: 'Open Sans', sans-serif;
+  color: #f3f3f3;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* stretches to fill space above button */
+}
+
+/* buttons in offerings match global btn and align evenly */
+.offering .btn {
+  align-self: center;
+  background: #bf8cd6;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+.offering .btn:hover {
+  background: #e0c1ee;
+}
+
+/* --- Footer --- */
+footer {
+  background: #333;
+  color: #7e6a3f;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+a {
+  color:#374e2a;
+}
+
+a.hover {
+  color:#608b47;
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hidden on mobile (add burger later if desired) */
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.4rem;
+  }
+
+  .offerings-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offering {
+    width: 100%;
+    max-width: 500px;
+  }
+}
